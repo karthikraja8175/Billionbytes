@@ -1,3 +1,8 @@
+:root {
+  --secondary-color: #cba243;
+}
+
+
 body{
   background-color:#ffffff;
 }
@@ -11,12 +16,10 @@ body{
   display: flex;
   align-items: center;
   padding: 0px 20px;
-  background-color: #BEA875;
+  background-color: var(--secondary-color);
 }
 
-.navbar.scrolled {
-  background-color: #BEA875; /* Background color when scrolled */
-}
+
 
 .navbar .logo {
   opacity: 200%;
@@ -58,6 +61,19 @@ body{
   transition: 0.5s ease-in-out;
 }
 
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
 /* Main content to allow scrolling */
 .content {
   height: 1500px;
@@ -91,7 +107,7 @@ body{
 }
 
 .about .title{
-  color:#BEA875;
+  color: var(--secondary-color);
   font-family: 'Times New Roman', Times, serif;
   font-size: 4vw;
   text-align: center;
@@ -110,7 +126,7 @@ body{
 }
 
 .services .title{
-  color:#BEA875;
+  color:var(--secondary-color);
   font-family: 'Times New Roman', Times, serif;
   font-size: 4vw;
   text-align: center;
@@ -131,7 +147,7 @@ body{
   margin-top:2%;
   border:solid;
   align-items: center;
-  border-color:#BEA875;
+  border-color:var(--secondary-color);
   transform: all;
   box-shadow: 15px 10px 10px black;
 }
@@ -167,7 +183,7 @@ body{
 }
 
 .Stories .title{
-  color:#BEA875;
+  color:var(--secondary-color);
   font-family: 'Times New Roman', Times, serif;
   font-size: 4vw;
   text-align: center;
@@ -227,8 +243,8 @@ body{
   text-decoration: none;
   text-align: center;
   border-radius: 50px;
-  border: 3px solid #BEA875;
-  color: #BEA875;
+  border: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
   font-size: 1.5vw;
   font-family: arial;
   position: relative;
@@ -245,7 +261,7 @@ body{
   height: 100%;
   top: -100%;
   left: 0;
-  background: #BEA875;
+  background: var(--secondary-color);
   z-index: -1;
   transition: all .35s;
 }
@@ -268,7 +284,7 @@ body{
 }
 
 .Clients .title{
-  color:#BEA875;
+  color:var(--secondary-color);
   font-family: 'Times New Roman', Times, serif;
   font-size: 4vw;
   text-align: center;
@@ -277,7 +293,7 @@ body{
 .Clients p{
   color:#272726;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
   margin:25%;
   margin-top: 5%;
@@ -322,7 +338,7 @@ body{
     margin-top: 15%;
   }
   .pricing .title{
-    color:#BEA875;
+    color:var(--secondary-color);
   font-family: 'Times New Roman', Times, serif;
   font-size: 4vw;
   text-align: center;
@@ -336,7 +352,7 @@ body{
   }
   .pricing-card {
     margin:3%;
-    border: 3px solid #BEA875;
+    border: 3px solid var(--secondary-color);
     border-radius: 5px;
     padding: 20px;
     width: 250px;
@@ -372,7 +388,7 @@ body{
 .separator {
     width: 30px;
     height: 2px;
-    background-color: #a89b76;
+    background-color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
@@ -411,7 +427,7 @@ body{
 
 .book-btn {
     display: block;
-    background-color: #a89b76;
+    background-color: var(--secondary-color);
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -422,11 +438,11 @@ body{
 }
 
 .book-btn:hover {
-    background-color: #BEA875;
+    background-color: var(--secondary-color);
 }
 
 .footer {
-  background-color: #bfa469; /* Background color */
+  background-color: var(--secondary-color); /* Background color */
   padding: 20px;
   display: flex;
   justify-content: space-around;
@@ -472,4 +488,146 @@ body{
 .footer .logo img {
   max-width: 100%;
   height: auto;
+}
+
+@media only screen and (max-width: 800px) {
+ 
+  .services .imges{
+    flex-direction: column;
+      align-items: flex-start;
+  }
+  .services .imges img{
+    width:90%;
+    height:80%;
+  }
+  .services .title, .about .title, .Stories .title, .Clients .title, .pricing  .title{
+    font-size: 8vw;
+  }
+  .image-slider{
+    margin-top: 20%;
+    
+  }
+  .about{
+    margin-top:15%;
+    align-items: center;
+  }
+  .about p{
+    font-size: 3.5vw;
+  }
+  .carousel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .carousel__item1 {
+    transform: rotateY(0deg);
+    margin:0;
+  }
+  
+  .carousel__item2 {
+   display: none;
+  }
+  
+  .carousel__item3 {
+    display: none;
+  }
+  
+  .stories .ram{
+    font-size: 7vw;
+  }
+   
+  .stories p {
+    font-size: 4vw;
+    margin:10%;
+  }
+
+  .stories .readmore{
+    margin-top:10%;
+    font-size: 4vw;
+  }
+
+  .Clients-container{
+    margin:10%;
+  }
+
+  .price-content{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pricing-card{
+    margin-top:10%;
+  }
+
+  .column-logo{
+    margin-top: 5%;
+  }
+
+  .footer .column{
+    margin-top: 15%;
+    font-size: 5vw;
+  }
+  
+  .Clients-container p{
+    font-size: 5vw;
+  }
+  
+  .Clients-author {
+    font-size: 6vw;
+  }
+
+  .Clients-role {
+    font-size: 5vw;
+  }
+
+  .navbar .logo img{
+    padding:12%;
+  }
+  .navbar-container {
+      justify-content: space-between;
+  }
+
+  .navbar-menu {
+      position: fixed;
+      left: -130%;
+      top: 11%;
+      padding: 5%;
+      flex-direction: column;
+      background-color: #cba243;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-link {
+      color: #fff;
+      font-size: 8vw;
+  }
+
+  .navbar-menu.active {
+      left: 0;
+  }
+
+  .navbar-item {
+      margin:0;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      margin-left: 10%;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
 }
