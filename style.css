@@ -616,7 +616,7 @@ body{
   .hamburger {
       display: block;
       cursor: pointer;
-      margin-left: 10%;
+      margin-left: -270%;
   }
 
   .hamburger.active .bar:nth-child(2) {
