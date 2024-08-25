@@ -37,7 +37,7 @@ body{
 }
 
 .navbar .navbar-menu {
-  margin-left: 40%;
+  margin-left: 25%;
   display: flex;
   list-style: none;
 
@@ -144,6 +144,8 @@ body{
 }
 
 .services img { 
+  height: 90%;
+  width:100%;
   margin-top:2%;
   border:solid;
   align-items: center;
@@ -180,6 +182,11 @@ body{
   perspective: 1000px;
   width: 100%;
   justify-content: center;
+}
+
+.carousel img{
+width:90%;
+height: 100%;
 }
 
 .Stories .title{
@@ -442,7 +449,7 @@ body{
 }
 
 .footer {
-  background-color: var(--secondary-color); /* Background color */
+  background-color: var(--secondary-color); /*Background color*/
   padding: 20px;
   display: flex;
   justify-content: space-around;
@@ -454,11 +461,11 @@ body{
 .footer .column {
   flex: 1;
   margin: 10px;
-  min-width: 200px;
-  margin-left:7%;
+  min-width: 100px;
+  margin-left:4%;
 }
 .footer .column-logo{
-  margin-left:7%;
+  margin-left:5%;
 }
 
 .footer .column h3 {
@@ -490,7 +497,7 @@ body{
   height: auto;
 }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 500px) {
  
   .services .imges{
     flex-direction: column;
@@ -589,7 +596,7 @@ body{
 
   .navbar-menu {
       position: fixed;
-      left: -130%;
+      left: -140%;
       top: 11%;
       padding: 5%;
       flex-direction: column;
@@ -631,3 +638,6 @@ body{
       transform: translateY(-8px) rotate(-45deg);
   }
 }
+
+
+
